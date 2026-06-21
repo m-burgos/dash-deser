@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-06-19T00:04:58",
+  "n_semester_observed": 4,
+  "target_col": "y_S5",
+  "encoding": "onehot",
+  "cv": {
+    "splitter": "RepeatedStratifiedKFold",
+    "n_splits": 5,
+    "n_repeats": 5,
+    "total_folds": 25,
+    "stratified": true,
+    "random_state": 42
+  },
+  "baseline": "Dummy (prior)",
+  "significance_metrics": [
+    "ROC-AUC",
+    "F1",
+    "Brier"
+  ],
+  "significance_alpha": 0.05,
+  "n_samples": 15466,
+  "target_distribution": {
+    "0": 0.6903,
+    "1": 0.3097
+  },
+  "classifiers": [
+    "Dummy (prior)",
+    "Logistic Regression",
+    "Nearest Neighbors",
+    "Linear SVM",
+    "RBF SVM",
+    "Decision Tree",
+    "Random Forest",
+    "Balanced Random Forest",
+    "Calibrated Random Forest",
+    "AdaBoost",
+    "XGBoost",
+    "CatBoost",
+    "Naive Bayes",
+    "QDA",
+    "Neural Net"
+  ],
+  "elapsed_min": 19.42
+}
