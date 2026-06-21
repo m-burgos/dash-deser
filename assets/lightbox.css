@@ -1,0 +1,33 @@
+/* Clickable images get a pointer cursor */
+.expandable-img {
+    cursor: pointer;
+    transition: opacity 0.15s;
+}
+.expandable-img:hover {
+    opacity: 0.85;
+}
+
+/* Full-screen overlay */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;          /* click anywhere to close */
+}
+.lightbox-overlay.active {
+    display: flex;
+}
+
+/* The expanded image */
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
